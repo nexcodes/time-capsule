@@ -12,27 +12,22 @@ function Navbar({ user }: { user?: ExtendedUser }) {
     <div className='relative max-w-7xl mx-auto w-full px-4 py-8'>
       <div className='relative'>
         <header>
-          <div className={`md:hidden mx-2 pb-5`}>
-            <Logo />
-          </div>
-          <nav
-            className={`pb-5 md:text-sm absolute top-0 inset-x-0 shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent`}
-          >
-            <div className='gap-x-14 items-center px-4 md:flex justify-between md:px-8'>
-              <Logo />
-
-              <div className='items-center justify-end mt-6 space-y-6 md:flex md:mt-0 group'>
-                <Link
-                  href={!!user ? '/capsules' : '/auth/login'}
-                  className='flex items-center justify-center gap-x-1 py-3 px-4 text-slate-900 font-medium transform-gpu rounded-full md:inline-flex '
-                >
-                  {!!user ? 'View Capsules' : 'Sign In'}
-                  <ChevronRight
-                    size={24}
-                    className='group-hover:translate-x-0.5 transition-transform'
-                  />
-                </Link>
+          <nav>
+            <div className='flex items-center justify-between'>
+              <div className='whitespace-nowrap'>
+                <Logo />
               </div>
+
+              <Link
+                href={!!user ? '/capsules' : '/auth/login'}
+                className='flex items-center justify-center gap-x-1 py-3 px-4 text-slate-900 font-medium transform-gpu rounded-full md:inline-flex whitespace-nowrap text-sm sm:text-base'
+              >
+                {!!user ? 'View Capsules' : 'Sign In'}
+                <ChevronRight
+                  size={24}
+                  className='group-hover:translate-x-0.5 transition-transform'
+                />
+              </Link>
             </div>
           </nav>
         </header>

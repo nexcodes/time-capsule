@@ -7,7 +7,9 @@ const SidebarMobile = () => {
     <div className='lg:hidden'>
       <Sheet>
         <SheetTrigger>
-          <AlignLeft className='w-8 h-8' />
+          <div className='p-4'>
+            <AlignLeft className='w-8 h-8' />
+          </div>
         </SheetTrigger>
         <SheetContent className='p-2 w-11/12' side='left'>
           <div className='mt-4' />
